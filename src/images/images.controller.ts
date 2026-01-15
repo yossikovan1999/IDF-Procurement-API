@@ -9,6 +9,7 @@ import { ImagesService } from './images.service';
 import { CreateImageDto } from './dto/create-image.dto';
 import { UpdateImageDto } from './dto/update-image.dto';
 import { FileInterceptor } from '@nestjs/platform-express';
+import { Logger } from '@nestjs/common';
 
 
 @Controller('images')

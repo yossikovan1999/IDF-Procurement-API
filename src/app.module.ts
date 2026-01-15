@@ -1,9 +1,10 @@
-import { Module } from '@nestjs/common';
+import { Logger, Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { TransactionsModule } from './transactions/transactions.module';
 import { SequelizeModule } from '@nestjs/sequelize';
 import { Item} from './transactions/entities/item.entity';
+import { ImagesModule } from './images/images.module';
 
 @Module({
   imports: [
@@ -19,6 +20,7 @@ import { Item} from './transactions/entities/item.entity';
       synchronize : true,
       autoLoadModels : true
     }),
+    ImagesModule,
   ],
   controllers: [AppController],
   providers: [AppService],
